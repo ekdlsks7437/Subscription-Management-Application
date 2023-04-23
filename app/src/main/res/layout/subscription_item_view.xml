@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/subscription_list_item"
+    android:paddingTop="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="12dp"
+        android:paddingBottom="5dp"
+        android:id="@+id/card_view">
+
+        <LinearLayout
+            android:id="@+id/ll_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="2dp"
+            android:paddingBottom="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Test subscription"
+                    android:id="@+id/tv_subscription_list_name"
+                    android:textStyle="bold"
+                    android:textSize="25sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="$50.00"
+                        android:id="@+id/tv_subscription_list_price"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:text="renews in 20 days"
+                        android:id="@+id/tv_subscription_list_renewal_date"
+                        android:textStyle="bold"
+                        android:gravity="end"
+                        android:paddingHorizontal="20dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageButton
+                android:id="@+id/img_subscription_list_dots"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/round_more_vert_24"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:backgroundTint="#00000000"
+                android:contentDescription="expand subscription settings"
+                app:tint="#ebebeb" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp" >
+
+            <!--text view for heading-->
+            <TextView
+                android:id="@+id/header_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Subscription Manager"
+                android:textSize="35dp"
+                android:textStyle="bold" />
+
+            <!--edit text for email -->
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/header_login"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="10dp"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress" />
+
+            <!--edit text for user password-->
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_email"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/error_pass_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_password"
+                android:gravity="center_horizontal"
+                android:layout_marginStart="10dp"
+                android:text="Incorrect Password / Email"
+                android:textSize="20dp"
+                android:textColor="@color/design_default_color_error"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_below="@id/header" >
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:layout_marginBottom="30dp" />
+
+            <TextView
+                android:id="@+id/text_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_login"
+                android:gravity="center_horizontal"
+                android:text="New User? Register below!"
+                android:textSize="20dp" />
+
+            <!--button to log in a user -->
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_register"
+                android:layout_marginStart="10dp"
+                android:text="Register"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
